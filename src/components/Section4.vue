@@ -8,19 +8,19 @@
     <div class="section-image">
       <div class="image-link">
         <div>
-          <a href="google.com">
+          <a href="https://www.gitlab.com/hakimajaman">
             <img :src="gitlab" alt="gitlab.com/hakimajaman" />
             <span>Gitlab</span>
           </a>
         </div>
         <div>
-          <a href="google.com">
+          <a href="https://www.github.com/hakimajaman">
             <img :src="github" alt="github.com/hakimajaman" />
             <span>Github</span>
           </a>
         </div>
         <div>
-          <a href="google.com">
+          <a href="https://www.linkedin.com/in/rifqi-taufiqul-hakim-6806bb194">
             <img
               :src="linkedin"
               alt="linkedin.com/in/rifqi-taufiqul-hakim-6806bb194"

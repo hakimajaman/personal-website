@@ -1,5 +1,10 @@
 <template>
-  <div class="listing-container" :style="{ left: list_scroll }">
+  <div
+    class="listing-container"
+    :style="{ left: list_scroll }"
+    @mouseover="mousehover = true"
+    @mouseleave="mousehover = false"
+  >
     <div class="listing-list" v-for="(skill, index) in skills" :key="index">
       <img :src="skill.image" :alt="skill.name" />
       <h1>{{ skill.name }}</h1>
@@ -12,6 +17,7 @@ export default {
   props: ["skills"],
   data() {
     return {
+      mousehover: false,
       mousemove: 0,
       runscroll: false,
       count_scroll: -150,
@@ -25,9 +31,9 @@ export default {
     },
     scrollRight() {
       if (this.count_scroll === 0) return;
-      this.count_scroll += 5;
-      this.list_scroll = this.count_scroll + "px";
-      if (this.runscroll) {
+      if (this.runscroll && this.mousehover) {
+        this.count_scroll += 5;
+        this.list_scroll = this.count_scroll + "px";
         setTimeout(this.scrollRight, 50);
       }
     },
@@ -53,10 +59,12 @@ export default {
       ) {
         return;
       } else {
-        this.count_scroll -= 5;
-        this.list_scroll = this.count_scroll + "px";
+        if (this.runscroll && this.mousehover) {
+          this.count_scroll -= 5;
+          this.list_scroll = this.count_scroll + "px";
+        }
       }
-      if (this.runscroll) {
+      if (this.runscroll && this.mousehover) {
         setTimeout(this.scrollLeft, 50);
       }
     },
