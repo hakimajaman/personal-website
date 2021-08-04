@@ -6,7 +6,9 @@
     @mouseleave="mousehover = false"
   >
     <div class="listing-list" v-for="(skill, index) in skills" :key="index">
-      <img :src="skill.image" :alt="skill.name" />
+      <div class="image-container">
+        <img :src="skill.image" :alt="skill.name" />
+      </div>
       <h1>{{ skill.name }}</h1>
     </div>
   </div>
@@ -132,8 +134,13 @@ export default {
 }
 .listing-list img {
   width: 250px;
-  height: 250px;
   margin-bottom: 60px;
   margin-top: 10px;
+}
+.image-container {
+  height: 300px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

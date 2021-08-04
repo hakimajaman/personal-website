@@ -26,32 +26,38 @@ export default {
     return {
       experiences: [
         {
+          name: "No Travel No Life",
+          position: "Front-End Developer",
+          task: "Create client apps for travellers, it's like social media.",
+          picture: null,
+          alt: "NTNL",
+          technology: "nuxtjs, nodejs, postgresql"
+        },
+        {
           name: "Rumah Tahfidz Umar bin Khattab Batam",
           position: "Fullstack Developer",
           task:
             "Create backend, front-end, and the android apps for teacher attendance.",
           picture: Image_RTUBK,
+          alt: "RTUBK",
           technology: "reactjs, react native, nestjs, mongodb"
-        },
-        {
-          name: "No Travel No Life",
-          position: "Front-End Developer",
-          task: "Create client apps for travellers, it's like social media.",
-          picture: null,
-          technology: "nuxtjs, nodejs, postgresql"
         },
         {
           name: "Glints Academy x Binar",
           position: "Front-End Developer",
-          task: "Learn about front-end developer.",
+          task:
+            "Learn about front-end developer with HTML, CSS, CSS Preprocessor, CSS Framework, ReactJs, Git, etc.",
           picture: Image_GlintsXBinar,
+          alt: "GlitsXBinar",
           technology: "reactjs"
         },
         {
           name: "Glints Academy x Binar",
           position: "Back-End Developer",
-          task: "Learn about back-end developer",
+          task:
+            "Learn about back-end developer with NodeJs, ExpressJs, MongoDB, etc. Create a REST APIs, etc.",
           picture: Image_GlintsXBinar,
+          alt: "GlitsXBinar",
           technology: "nodejs, expressjs"
         },
         {
@@ -60,6 +66,7 @@ export default {
           task:
             "Learn, Do and Get my diploma 3 by creating last apps with my team, the apps called re-visit.",
           picture: Image_Poltek,
+          alt: "Polibatam",
           technology: "vuejs, nodejs, mongodb, flutter"
         },
         {
@@ -68,6 +75,7 @@ export default {
           task:
             "Help the IT Support to fix computer, and update software, etc.",
           picture: Image_Schneider,
+          alt: "Schneider-Electric",
           technology: null
         },
         {
@@ -75,6 +83,7 @@ export default {
           position: "Member Education",
           task: "Teach and learn about linux, open source software, etc.",
           picture: Image_BLUG,
+          alt: "BLUG",
           technology: null
         },
         {
@@ -82,6 +91,7 @@ export default {
           position: "Student - Computer Engineering",
           task: "Learn about Networking, Linux and HTML & CSS.",
           picture: Image_SMK,
+          alt: "SMKN5Batam",
           technology: "html, css"
         }
       ]

@@ -11,8 +11,12 @@
       :key="index"
     >
       <div>
-        <h1>Fullstack Developer</h1>
-        <h1>I created Attendance Apps for teacher on Android and Website</h1>
+        <img :src="data.picture" :alt="data.alt" v-if="data.picture" />
+        <h1 v-if="!data.picture" class="alt-text">{{ data.alt }}</h1>
+      </div>
+      <div>
+        <h1>{{ data.position }}</h1>
+        <h1>{{ data.task }}</h1>
       </div>
     </div>
   </div>
@@ -41,8 +45,8 @@ export default {
     return {
       datas: [1, 2, 3, 4, 5],
       select: 2,
-      count_scroll: -50,
-      list_scroll: "-50%" /* tambah 70 untuk kelanjutan dari 50 */
+      count_scroll: -45,
+      list_scroll: "-45%" /* tambah 70 untuk kelanjutan dari 50 */
     };
   },
   methods: {
@@ -112,6 +116,28 @@ export default {
   margin-right: 200px;
   transition: all 0.5s ease;
   border-radius: 5px;
+  display: flex;
+}
+.box div:first-child {
+  margin-right: 80px;
+}
+.box div {
+  text-align: left;
+}
+.box div h1:first-child {
+  margin-top: 60px;
+}
+.box div h1 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 50px;
+  font-family: dyuthi, sans-serif;
+  font-weight: 300;
+}
+.box img {
+  width: 200px;
+  margin-left: 80px;
+  margin-top: 50px;
 }
 .primary-box {
   background-image: linear-gradient(
@@ -120,24 +146,13 @@ export default {
     #2b214b
   );
   z-index: 2;
-  /* box-shadow: 5px 10px rgba(81, 46, 94, 0.1); */
   box-shadow: 5px 10px rgba(22, 17, 51, 0.5);
 }
 .primary-box div h1 {
   color: white;
 }
-.box div h1 {
-  margin: 0;
-  font-size: 50px;
-  font-family: dyuthi, sans-serif;
-  font-weight: 300;
-}
 .primary-box div h1:first-child {
   color: #f40968ff;
-}
-.box div {
-  width: 70%;
-  text-align: left;
 }
 .prev-box {
   margin-top: 130px;
@@ -157,8 +172,14 @@ export default {
     rgba(0, 0, 0, 0.5)
   );
 }
+.prev-box img {
+  filter: grayscale(100%);
+}
 .prev-box div h1 {
   color: transparent;
+}
+.next-box img {
+  filter: grayscale(100%);
 }
 .next-box div h1 {
   color: transparent;
