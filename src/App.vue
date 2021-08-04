@@ -1,26 +1,39 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <section-1 />
+  <section-2 />
+  <section-3 />
+  <section-4 />
+  <section-5 />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Section1 from "./components/Section1.vue";
+import Section2 from "./components/Section2.vue";
+import Section3 from "./components/Section3.vue";
+import Section4 from "./components/Section4.vue";
+import Section5 from "./components/Section5.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Section1,
+    Section2,
+    Section3,
+    Section4,
+    Section5
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body,
+html {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+body {
+  background-color: #20194a;
 }
 </style>
