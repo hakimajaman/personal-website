@@ -10,9 +10,23 @@
       v-for="(data, index) in experiences"
       :key="index"
     >
-      <div>
-        <img :src="data.picture" :alt="data.alt" v-if="data.picture" />
-        <h1 v-if="!data.picture" class="alt-text">{{ data.alt }}</h1>
+      <div class="image-container">
+        <div class="logo">
+          <img :src="data.picture" :alt="data.alt" v-if="data.picture" />
+          <h1 v-if="!data.picture" class="alt-text">{{ data.alt }}</h1>
+        </div>
+        <div class="technology-container">
+          <div
+            class="technology-column"
+            v-for="(img, idx) in data.technology"
+            :key="idx"
+          >
+            <div>
+              <img :src="img.picture" :alt="img.name" />
+            </div>
+            <span>{{ img.name }}</span>
+          </div>
+        </div>
       </div>
       <div>
         <h1>{{ data.position }}</h1>
@@ -118,9 +132,6 @@ export default {
   border-radius: 5px;
   display: flex;
 }
-.box div:first-child {
-  margin-right: 80px;
-}
 .box div {
   text-align: left;
 }
@@ -134,7 +145,15 @@ export default {
   font-family: dyuthi, sans-serif;
   font-weight: 300;
 }
-.box img {
+.image-container {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.logo {
+  margin-right: 80px;
+}
+.logo img {
   width: 200px;
   margin-left: 80px;
   margin-top: 50px;
@@ -183,5 +202,32 @@ export default {
 }
 .next-box div h1 {
   color: transparent;
+}
+.technology-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: auto;
+  margin-bottom: 30px;
+  margin-left: 50px;
+}
+.technology-column {
+  margin-right: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ecececff;
+}
+.technology-column div {
+  height: 35px;
+}
+.technology-column div:last-child {
+  margin-right: 0px;
+}
+.technology-column div img {
+  width: 30px;
+  filter: grayscale(100%);
 }
 </style>

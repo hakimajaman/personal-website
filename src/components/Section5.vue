@@ -18,6 +18,17 @@ import Image_Schneider from "../assets/images/schneider.png";
 import Image_BLUG from "../assets/images/blug.jpeg";
 import Image_Poltek from "../assets/images/poltek.png";
 import Image_SMK from "../assets/images/smkn5batam.jpg";
+import Image_NuxtJs from "../assets/images/nuxtjs.png";
+import Image_NodeJs from "../assets/images/nodejs.png";
+import Image_PostgreSQL from "../assets/images/postgresql.png";
+import Image_React from "../assets/images/react.svg";
+import Image_NestJs from "../assets/images/nestjs.png";
+import Image_MongoDB from "../assets/images/mongodb.png";
+import Image_ExpressJs from "../assets/images/expressjs.png";
+import Image_VueJs from "../assets/images/vuejs.png";
+import Image_Flutter from "../assets/images/flutter.png";
+import Image_HTML from "../assets/images/html5.png";
+import Image_CSS from "../assets/images/css.png";
 export default {
   components: {
     Section5List
@@ -31,7 +42,20 @@ export default {
           task: "Create client apps for travellers, it's like social media.",
           picture: null,
           alt: "NTNL",
-          technology: "nuxtjs, nodejs, postgresql"
+          technology: [
+            {
+              name: "NuxtJs",
+              picture: Image_NuxtJs
+            },
+            {
+              name: "NodeJs",
+              picture: Image_NodeJs
+            },
+            {
+              name: "PostgreSQL",
+              picture: Image_PostgreSQL
+            }
+          ]
         },
         {
           name: "Rumah Tahfidz Umar bin Khattab Batam",
@@ -40,7 +64,24 @@ export default {
             "Create backend, front-end, and the android apps for teacher attendance.",
           picture: Image_RTUBK,
           alt: "RTUBK",
-          technology: "reactjs, react native, nestjs, mongodb"
+          technology: [
+            {
+              name: "ReactJs",
+              picture: Image_React
+            },
+            {
+              name: "React Native",
+              picture: Image_React
+            },
+            {
+              name: "NestJs",
+              picture: Image_NestJs
+            },
+            {
+              name: "MongoDB",
+              picture: Image_MongoDB
+            }
+          ]
         },
         {
           name: "Glints Academy x Binar",
@@ -49,7 +90,12 @@ export default {
             "Learn about front-end developer with HTML, CSS, CSS Preprocessor, CSS Framework, ReactJs, Git, etc.",
           picture: Image_GlintsXBinar,
           alt: "GlitsXBinar",
-          technology: "reactjs"
+          technology: [
+            {
+              name: "ReactJs",
+              picture: Image_React
+            }
+          ]
         },
         {
           name: "Glints Academy x Binar",
@@ -58,7 +104,16 @@ export default {
             "Learn about back-end developer with NodeJs, ExpressJs, MongoDB, etc. Create a REST APIs, etc.",
           picture: Image_GlintsXBinar,
           alt: "GlitsXBinar",
-          technology: "nodejs, expressjs"
+          technology: [
+            {
+              name: "ExpressJs",
+              picture: Image_ExpressJs
+            },
+            {
+              name: "NodeJs",
+              picture: Image_NodeJs
+            }
+          ]
         },
         {
           name: "Politeknik Negeri Batam",
@@ -67,7 +122,24 @@ export default {
             "Learn, Do and Get my diploma 3 by creating last apps with my team, the apps called re-visit.",
           picture: Image_Poltek,
           alt: "Polibatam",
-          technology: "vuejs, nodejs, mongodb, flutter"
+          technology: [
+            {
+              name: "VueJs",
+              picture: Image_VueJs
+            },
+            {
+              name: "NodeJs",
+              picture: Image_NodeJs
+            },
+            {
+              name: "MongoDB",
+              picture: Image_MongoDB
+            },
+            {
+              name: "Flutter",
+              picture: Image_Flutter
+            }
+          ]
         },
         {
           name: "PT. Schneider Electric Manufacturing Batam",
@@ -76,7 +148,7 @@ export default {
             "Help the IT Support to fix computer, and update software, etc.",
           picture: Image_Schneider,
           alt: "Schneider-Electric",
-          technology: null
+          technology: []
         },
         {
           name: "Batam Linux User Group",
@@ -84,7 +156,7 @@ export default {
           task: "Teach and learn about linux, open source software, etc.",
           picture: Image_BLUG,
           alt: "BLUG",
-          technology: null
+          technology: []
         },
         {
           name: "Vocational High School 5 Batam",
@@ -92,7 +164,16 @@ export default {
           task: "Learn about Networking, Linux and HTML & CSS.",
           picture: Image_SMK,
           alt: "SMKN5Batam",
-          technology: "html, css"
+          technology: [
+            {
+              name: "HTML",
+              picture: Image_HTML
+            },
+            {
+              name: "CSS",
+              picture: Image_CSS
+            }
+          ]
         }
       ]
     };
@@ -115,7 +196,7 @@ export default {
   z-index: 1;
 }
 .section {
-  margin-bottom: 500px;
+  height: 850px;
 }
 .section-title {
   text-align: center;
